@@ -16,7 +16,6 @@ const app = express();
  * CORS is restricted to your frontend URL in production to prevent unauthorized API access.
  */
 app.use(helmet());
-app.use(cors());
 app.use(cors({
   origin: 'https://xpweb-chi.vercel.app', // Notice: No slash at the end!
   credentials: true // Allowed to send tokens/cookies
