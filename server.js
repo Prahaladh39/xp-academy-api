@@ -17,6 +17,10 @@ const app = express();
  */
 app.use(helmet());
 app.use(cors());
+app.use(cors({
+  origin: 'https://xpweb-chi.vercel.app', // Notice: No slash at the end!
+  credentials: true // Allowed to send tokens/cookies
+}));
 app.use(express.json({ limit: "10kb" })); // Safety: prevents large payload attacks
 
 // Routes
